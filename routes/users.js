@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+let factor = 2;
+let current = 25;
+
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+
+  current = current * factor;
+
+  res.send(`Current is: ${current}`);
 });
 
 module.exports = router;
